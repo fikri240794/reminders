@@ -1,0 +1,172 @@
+{
+	"info": {
+		"_postman_id": "87852829-3ff5-42b7-b6c9-56ec0ad9dc4f",
+		"name": "Reminders",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "FindAll",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/reminders?skip=0&take=100",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"reminders"
+					],
+					"query": [
+						{
+							"key": "skip",
+							"value": "0"
+						},
+						{
+							"key": "take",
+							"value": "100"
+						},
+						{
+							"key": "keyword",
+							"value": "some keyword",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "FindOne",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/reminders/find?keyword=some keyword",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"reminders",
+						"find"
+					],
+					"query": [
+						{
+							"key": "keyword",
+							"value": "some keyword"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "FindById",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/reminders/2f12a173-8a47-4a4f-a12b-0694f2b9431",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"reminders",
+						"2f12a173-8a47-4a4f-a12b-0694f2b9431"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"note\": \"testing\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/reminders",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"reminders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"note\": \"testing edit\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/reminders/2f12a173-8a47-4a4f-a12b-0694f2b94312",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"reminders",
+						"2f12a173-8a47-4a4f-a12b-0694f2b94312"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/reminders/2f12a173-8a47-4a4f-a12b-0694f2b94312",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"reminders",
+						"2f12a173-8a47-4a4f-a12b-0694f2b94312"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
