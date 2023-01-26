@@ -5,7 +5,7 @@ import (
 	"github.com/fikri240794/reminders/transports/restful_api/middlewares/corses"
 	"github.com/fikri240794/reminders/transports/restful_api/middlewares/etags"
 	"github.com/fikri240794/reminders/transports/restful_api/middlewares/favicons"
-	"github.com/fikri240794/reminders/transports/restful_api/middlewares/logger"
+	"github.com/fikri240794/reminders/transports/restful_api/middlewares/loggers"
 	"github.com/fikri240794/reminders/transports/restful_api/middlewares/recovers"
 	"github.com/fikri240794/reminders/transports/restful_api/middlewares/request_timeouts"
 	"github.com/fikri240794/reminders/transports/restful_api/middlewares/requestids"
@@ -15,8 +15,8 @@ import (
 var MiddlewareModule wire.ProviderSet = wire.NewSet(
 	compresses.NewCompressMiddleware,
 	wire.Bind(new(compresses.ICompressMiddleware), new(*compresses.CompressMiddleware)),
-	logger.NewLoggerMiddleware,
-	wire.Bind(new(logger.ILoggerMiddleware), new(*logger.LoggerMiddleware)),
+	loggers.NewLoggerMiddleware,
+	wire.Bind(new(loggers.ILoggerMiddleware), new(*loggers.LoggerMiddleware)),
 	recovers.NewRecoverMiddleware,
 	wire.Bind(new(recovers.IRecoverMiddleware), new(*recovers.RecoverMiddleware)),
 	favicons.NewFaviconMiddleware,

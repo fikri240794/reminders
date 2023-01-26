@@ -20,8 +20,11 @@
 # .env config file
 **/*.env
 
-# Generated google wire file
-**/wire_gen.go
+# Generated file
+**/*_gen.go
 
 # Generated swagger docs
-docs/
+docs
+
+# Air temp directory
+tmp

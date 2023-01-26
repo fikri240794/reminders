@@ -1,7 +1,3 @@
-//go:generate go run github.com/google/wire/cmd/wire gen github.com/fikri240794/reminders/transports/restful_api/servers
-//go:generate go run github.com/swaggo/swag/cmd/swag init --parseDependency --parseInternal
-//go:generate go run github.com/swaggo/swag/cmd/swag fmt
-
 package main
 
 import (

@@ -6,7 +6,6 @@ import (
 	"strconv"
 	"strings"
 
-	_ "github.com/denisenkom/go-mssqldb"
 	"github.com/fikri240794/reminders/configs"
 	_ "github.com/go-sql-driver/mysql"
 	"github.com/golang-migrate/migrate/v4"

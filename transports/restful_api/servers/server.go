@@ -1,3 +1,6 @@
+//go:generate rm -rf wire_gen.go
+//go:generate go run github.com/google/wire/cmd/wire
+
 package servers
 
 import (
