@@ -11,4 +11,4 @@ http:
 	go run . restful-api-server
 
 run: generate tidy
-	go run github.com/cosmtrek/air http
+	go run github.com/cosmtrek/air restful-api-server
