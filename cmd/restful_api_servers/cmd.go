@@ -1,4 +1,4 @@
-package restful_api
+package restful_api_servers
 
 import (
 	"github.com/fikri240794/reminders/configs"

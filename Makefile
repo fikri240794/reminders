@@ -4,11 +4,11 @@ generate:
 tidy:
 	go mod tidy
 
-run-database-migration:
+migration:
 	go run . database-migration
 
-run-restful-api-server:
+http:
 	go run . restful-api-server
 
-run: generate tidy run-database-migration
-	go run github.com/cosmtrek/air restful-api-server
+run: generate tidy
+	go run github.com/cosmtrek/air http
